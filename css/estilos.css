@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,500;0,700;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --pale-blue:hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    --text-color: #53575A;
+    --dark-color: #282D31;
+}
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+}
+.container{
+    background: var(--pale-blue) url(../img/pattern-background-desktop.svg) no-repeat;
+    position: relative;
+    min-height: 100vh;
+}
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 400px; 
+    border-radius: 20px;
+    background: #fff;
+    border-radius: 5%;
+}
+.card-header img{
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+.card-content{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.card-description{
+    text-align: center;
+}
+.card h2{
+    color: var(--dark-color);
+}
+.plan{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    border-radius: 10px;
+    background: var(--Very-pale-blue);
+}
+.info-plan{
+    display: flex;
+    column-gap: 10px;
+}
+.info-plan img{
+    width: 100%;
+    height: auto;
+}
+.price-title{
+    font-weight: bold;
+    color: var(--dark-color);
+}
+.payment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+}
+.payment button{
+    border:none;
+    width: 100%;
+    padding: .8rem 2rem;
+    border-radius: 5px;
+    background: var(--bright-blue);
+    color: var(--pale-blue);
+    font-weight: bold;
+    box-shadow: 0 20px 10px 0 var(--pale-blue);
+}
+.payment button:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+.payment a{
+    margin-top: 30px;
+    text-decoration: none;
+    color: inherit;
+}
+@media(max-width:800px){
+    .container{
+        background: var(--pale-blue) url(../img/pattern-background-mobile.svg) no-repeat;
+    }
+    .card{
+        width: 90%;
+    }
+    .info-plan img{
+        width: 100%;
+        max-width: 30px;
+        height: auto;
+    }
+}
